@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Solicitud de Cotización</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap%27);
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
   --b9:#0f2d52;--b8:#1a3f6f;--b7:#1e5296;--b6:#2563b0;--b4:#60a5e8;
@@ -78,86 +78,86 @@ tbody tr:hover td{background:#f7fbff}
 </head>
 <body>
 <header>
-  <div class="logo">
-    <div class="logo-box">📋</div>
-    <div>
-      <div class="logo-title">Solicitud de Cotización</div>
-      <div class="logo-sub" id="hdr-sub">Cargando...</div>
-    </div>
-  </div>
-  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px">
-    <div id="hdr-cnt" style="font-size:.75rem;color:rgba(255,255,255,.6)"></div>
-    <div id="hdr-prv-wrap" style="display:none;align-items:center;gap:5px">
-      <span style="font-size:.68rem;color:rgba(255,255,255,.45)">Proveedor:</span>
-      <span id="hdr-prv" style="font-size:.75rem;color:rgba(255,255,255,.85);font-weight:600"></span>
-    </div>
-  </div>
-</header>
-
-<div class="wrap">
-  <div id="div-loading" class="loading"><div class="sp">⏳</div><p style="margin-top:.8rem">Cargando materiales...</p></div>
-  <div id="div-content" style="display:none">
-    <div class="info-box">
-      <h2>📬 Complete la cotización y envíe al finalizar</h2>
-      <p>Complete <strong>Precio $</strong>, <strong>Marca</strong> y <strong>Disponibilidad</strong> para cada ítem.<br>
-      Parcial → cantidad disponible &nbsp;·&nbsp; No disponible → fecha estimada de entrega.<br>
-      <strong>Todos los ítems deben tener respuesta</strong> antes de poder enviar.</p>
-    </div>
-    <div class="panel">
-      <div class="ph">
-        <div class="pt">Materiales a cotizar<span class="cp" id="cpill">—</span></div>
-        <div style="font-size:.75rem;color:var(--n5)" id="prog-txt">0 / 0 completados</div>
-      </div>
-      <div class="tw">
-        <table>
-          <thead><tr>
-            <th>#</th><th>Código</th><th>NPF</th><th>Descripción</th><th>Almacén</th>
-            <th style="text-align:right">Cant.</th>
-            <th style="background:var(--a0);color:#92400e;min-width:90px">💱 Moneda</th>
-            <th style="background:var(--a0);color:#92400e;min-width:105px">💰 Precio</th>
-            <th style="background:var(--a0);color:#92400e;min-width:125px">🏷 Marca</th>
-            <th style="background:var(--a0);color:#92400e;min-width:145px">✅ Disponibilidad</th>
-            <th style="background:var(--a0);color:#92400e;min-width:120px">📦 Detalle</th>
-            <th style="background:var(--a0);color:#92400e;min-width:80px"></th>
-          </tr></thead>
-          <tbody id="tbody"></tbody>
-        </table>
-      </div>
-    </div>
-    <div class="footer">
-      <div style="font-size:.82rem;color:var(--n5)">
-        Completados: <strong id="ft-cot">0</strong> / <strong id="ft-tot">0</strong>
-      </div>
-      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-        <button class="btn bgh bsm" onclick="guardarProgreso()" title="Guardar progreso como Excel para continuar después">💾 Guardar progreso</button>
-        <label style="cursor:pointer" title="Cargar un progreso guardado anteriormente">
-          <input type="file" id="load-prog-file" accept=".xlsx" style="display:none" onchange="cargarProgreso(this)">
-          <span class="btn bgh bsm" style="pointer-events:none">📂 Cargar progreso</span>
-        </label>
-        <button class="btn bsuc" id="btn-env" onclick="enviar()">📤 Enviar cotización</button>
-      </div>
-    </div>
-  </div>
+<div class="logo">
+<div class="logo-box">📋</div>
+<div>
+<div class="logo-title">Solicitud de Cotización</div>
+<div class="logo-sub" id="hdr-sub">Cargando...</div>
 </div>
-
+</div>
+<div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px">
+<div id="hdr-cnt" style="font-size:.75rem;color:rgba(255,255,255,.6)"></div>
+<div id="hdr-prv-wrap" style="display:none;align-items:center;gap:5px">
+<span style="font-size:.68rem;color:rgba(255,255,255,.45)">Proveedor:</span>
+<span id="hdr-prv" style="font-size:.75rem;color:rgba(255,255,255,.85);font-weight:600"></span>
+</div>
+</div>
+</header>
+ 
+<div class="wrap">
+<div id="div-loading" class="loading"><div class="sp">⏳</div><p style="margin-top:.8rem">Cargando materiales...</p></div>
+<div id="div-content" style="display:none">
+<div class="info-box">
+<h2>📬 Complete la cotización y envíe al finalizar</h2>
+<p>Complete <strong>Precio $</strong>, <strong>Marca</strong> y <strong>Disponibilidad</strong> para cada ítem.<br>
+      Parcial → cantidad disponible &nbsp;·&nbsp; No disponible → fecha estimada de entrega.<br>
+<strong>Todos los ítems deben tener respuesta</strong> antes de poder enviar.</p>
+</div>
+<div class="panel">
+<div class="ph">
+<div class="pt">Materiales a cotizar<span class="cp" id="cpill">—</span></div>
+<div style="font-size:.75rem;color:var(--n5)" id="prog-txt">0 / 0 completados</div>
+</div>
+<div class="tw">
+<table>
+<thead><tr>
+<th>#</th><th>Código</th><th>NPF</th><th>Descripción</th><th>Almacén</th>
+<th style="text-align:right">Cant.</th>
+<th style="background:var(--a0);color:#92400e;min-width:90px">💱 Moneda</th>
+<th style="background:var(--a0);color:#92400e;min-width:105px">💰 Precio</th>
+<th style="background:var(--a0);color:#92400e;min-width:125px">🏷 Marca</th>
+<th style="background:var(--a0);color:#92400e;min-width:145px">✅ Disponibilidad</th>
+<th style="background:var(--a0);color:#92400e;min-width:120px">📦 Detalle</th>
+<th style="background:var(--a0);color:#92400e;min-width:80px"></th>
+</tr></thead>
+<tbody id="tbody"></tbody>
+</table>
+</div>
+</div>
+<div class="footer">
+<div style="font-size:.82rem;color:var(--n5)">
+        Completados: <strong id="ft-cot">0</strong> / <strong id="ft-tot">0</strong>
+</div>
+<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+<button class="btn bgh bsm" onclick="guardarProgreso()" title="Guardar progreso como Excel para continuar después">💾 Guardar progreso</button>
+<label style="cursor:pointer" title="Cargar un progreso guardado anteriormente">
+<input type="file" id="load-prog-file" accept=".xlsx" style="display:none" onchange="cargarProgreso(this)">
+<span class="btn bgh bsm" style="pointer-events:none">📂 Cargar progreso</span>
+</label>
+<button class="btn bsuc" id="btn-env" onclick="enviar()">📤 Enviar cotización</button>
+</div>
+</div>
+</div>
+</div>
+ 
 <!-- Netlify Forms removed - using EmailJS only -->
-
+ 
 <div class="ov" id="ov-ok">
-  <div class="ok-box">
-    <div class="ok-ico">✅</div>
-    <h2>¡Cotización enviada!</h2>
-    <p id="ok-msg">Su respuesta fue recibida correctamente. Muchas gracias.</p>
-  </div>
+<div class="ok-box">
+<div class="ok-ico">✅</div>
+<h2>¡Cotización enviada!</h2>
+<p id="ok-msg">Su respuesta fue recibida correctamente. Muchas gracias.</p>
+</div>
 </div>
 <div class="toast" id="toast"></div>
-
+ 
 <script src="https://cdn.jsdelivr.net/npm/lz-string@1.5.0/libs/lz-string.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 <script>
 let ITEMS = [];
 const R = {};
 let PRV_NOMBRE = '';
-
+ 
 window.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(location.search);
   const raw = params.get('d');
@@ -179,11 +179,11 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('div-content').style.display='block';
   render();
 });
-
+ 
 function showErr(msg){
   document.getElementById('div-loading').innerHTML='<p style="color:var(--r6);font-size:.9rem">⚠️ '+msg+'</p>';
 }
-
+ 
 function render(){
   const tb=document.getElementById('tbody');
   document.getElementById('cpill').textContent=' '+ITEMS.length+' ítems';
@@ -194,33 +194,33 @@ function render(){
     const tr=document.createElement('tr');
     tr.id='tr-'+i;
     tr.innerHTML=`
-      <td style="color:var(--n4);font-size:.7rem;font-family:var(--fm)">${i+1}</td>
-      <td style="font-family:var(--fm);font-size:.76rem;color:var(--b7);font-weight:600">${item.cod||'—'}</td>
-      <td style="font-family:var(--fm);font-size:.76rem;color:var(--n6)">${item.npf||'—'}</td>
-      <td style="max-width:240px;font-weight:500;font-size:.8rem;line-height:1.3">${item.nom||'—'}</td>
-      <td><span class="tag t-${alm}">${item.alm||'—'}</span></td>
-      <td style="text-align:right;font-weight:700;font-family:var(--fm)">${item.cant||0}</td>
-      <td>
-        <select class="sel" id="mon-${i}" onchange="upd(${i})" style="width:100%">
-          <option value="ARS">🇦🇷 ARS $</option>
-          <option value="USD">🇺🇸 USD $</option>
-        </select>
-      </td>
-      <td><input class="inp" id="p-${i}" type="number" min="0" step=".01" placeholder="0.00" oninput="upd(${i})"></td>
-      <td><input class="inp" id="m-${i}" type="text" placeholder="Marca..." oninput="upd(${i})"></td>
-      <td><select class="sel" id="d-${i}" onchange="chgD(${i})">
-        <option value="">— Seleccionar —</option>
-        <option value="Si">✅ Sí</option>
-        <option value="Parcial">⚠️ Parcial</option>
-        <option value="No">❌ No disponible</option>
-      </select></td>
-      <td><div class="extra" id="ex-${i}">
-        <label id="exl-${i}"></label>
-        <input class="inp" id="ed-${i}" type="text" oninput="upd(${i})">
-      </div></td>
-      <td style="white-space:nowrap">
-        <button onclick="addMarca(${i})" style="font-size:.7rem;padding:3px 7px;border:1px solid var(--b4);border-radius:4px;background:var(--b0);color:var(--b7);cursor:pointer">+ Marca</button>
-      </td>`;
+<td style="color:var(--n4);font-size:.7rem;font-family:var(--fm)">${i+1}</td>
+<td style="font-family:var(--fm);font-size:.76rem;color:var(--b7);font-weight:600">${item.cod||'—'}</td>
+<td style="font-family:var(--fm);font-size:.76rem;color:var(--n6)">${item.npf||'—'}</td>
+<td style="max-width:240px;font-weight:500;font-size:.8rem;line-height:1.3">${item.nom||'—'}</td>
+<td><span class="tag t-${alm}">${item.alm||'—'}</span></td>
+<td style="text-align:right;font-weight:700;font-family:var(--fm)">${item.cant||0}</td>
+<td>
+<select class="sel" id="mon-${i}" onchange="upd(${i})" style="width:100%">
+<option value="ARS">🇦🇷 ARS $</option>
+<option value="USD">🇺🇸 USD $</option>
+</select>
+</td>
+<td><input class="inp" id="p-${i}" type="number" min="0" step=".01" placeholder="0.00" oninput="upd(${i})"></td>
+<td><input class="inp" id="m-${i}" type="text" placeholder="Marca..." oninput="upd(${i})"></td>
+<td><select class="sel" id="d-${i}" onchange="chgD(${i})">
+<option value="">— Seleccionar —</option>
+<option value="Si">✅ Sí</option>
+<option value="Parcial">⚠️ Parcial</option>
+<option value="No">❌ No disponible</option>
+</select></td>
+<td><div class="extra" id="ex-${i}">
+<label id="exl-${i}"></label>
+<input class="inp" id="ed-${i}" type="text" oninput="upd(${i})">
+</div></td>
+<td style="white-space:nowrap">
+<button onclick="addMarca(${i})" style="font-size:.7rem;padding:3px 7px;border:1px solid var(--b4);border-radius:4px;background:var(--b0);color:var(--b7);cursor:pointer">+ Marca</button>
+</td>`;
     tb.appendChild(tr);
     // Extra marcas container row
     const emRow = document.createElement('tr');
@@ -229,49 +229,49 @@ function render(){
     tb.appendChild(emRow);
   });
 }
-
+ 
 // ─── MULTIPLE MARKS PER ITEM
 const EXTRA_MARCAS = {}; // {rowIdx: [{precio,marca,disp,det}]}
-
+ 
 function addMarca(i) {
   if (!EXTRA_MARCAS[i]) EXTRA_MARCAS[i] = [];
   const idx = EXTRA_MARCAS[i].length;
   EXTRA_MARCAS[i].push({precio:'',marca:'',disp:'',det:''});
   renderExtraMarcas(i);
 }
-
+ 
 function renderExtraMarcas(i) {
   const container = document.getElementById('extra-marcas-'+i);
   if (!container) return;
   const rows = EXTRA_MARCAS[i] || [];
   container.innerHTML = rows.map((m,j) => `
-    <tr class="extra-marca-row" id="emr-${i}-${j}" style="background:var(--b0)">
-      <td colspan="5" style="padding:3px 11px;font-size:.71rem;color:var(--b7);text-align:right">↳ opción ${j+2}</td>
-      <td>
-      <select class="sel" onchange="updEM(${i},${j},'moneda',this.value)" style="width:100%">
-        <option value="ARS" ${m.moneda==='ARS'||!m.moneda?'selected':''}>🇦🇷 ARS</option>
-        <option value="USD" ${m.moneda==='USD'?'selected':''}>🇺🇸 USD</option>
-      </select>
-    </td>
-    <td><input class="inp" type="number" min="0" step=".01" placeholder="0.00"
+<tr class="extra-marca-row" id="emr-${i}-${j}" style="background:var(--b0)">
+<td colspan="5" style="padding:3px 11px;font-size:.71rem;color:var(--b7);text-align:right">↳ opción ${j+2}</td>
+<td>
+<select class="sel" onchange="updEM(${i},${j},'moneda',this.value)" style="width:100%">
+<option value="ARS" ${m.moneda==='ARS'||!m.moneda?'selected':''}>🇦🇷 ARS</option>
+<option value="USD" ${m.moneda==='USD'?'selected':''}>🇺🇸 USD</option>
+</select>
+</td>
+<td><input class="inp" type="number" min="0" step=".01" placeholder="0.00"
         value="${m.precio}" oninput="updEM(${i},${j},'precio',this.value)" style="width:100%"></td>
-      <td><input class="inp" type="text" placeholder="Marca..."
+<td><input class="inp" type="text" placeholder="Marca..."
         value="${m.marca}" oninput="updEM(${i},${j},'marca',this.value)" style="width:100%"></td>
-      <td>
-        <select class="sel" onchange="updEMDisp(${i},${j},this.value)">
-          <option value="">— Sel —</option>
-          <option value="Si" ${m.disp==='Si'?'selected':''}>✅ Sí</option>
-          <option value="Parcial" ${m.disp==='Parcial'?'selected':''}>⚠️ Parcial</option>
-          <option value="No" ${m.disp==='No'?'selected':''}>❌ No</option>
-        </select>
-      </td>
-      <td>
+<td>
+<select class="sel" onchange="updEMDisp(${i},${j},this.value)">
+<option value="">— Sel —</option>
+<option value="Si" ${m.disp==='Si'?'selected':''}>✅ Sí</option>
+<option value="Parcial" ${m.disp==='Parcial'?'selected':''}>⚠️ Parcial</option>
+<option value="No" ${m.disp==='No'?'selected':''}>❌ No</option>
+</select>
+</td>
+<td>
         ${(m.disp==='Parcial'||m.disp==='No') ? `<input class="inp" type="text" placeholder="${m.disp==='Parcial'?'Cantidad':'Fecha'}" value="${m.det}" oninput="updEM(${i},${j},'det',this.value)" style="width:100%">` : ''}
-      </td>
-      <td><button onclick="delMarca(${i},${j})" style="font-size:.7rem;padding:2px 6px;border:1px solid #fca5a5;border-radius:4px;background:#fee2e2;color:var(--r6);cursor:pointer">✕</button></td>
-    </tr>`).join('');
+</td>
+<td><button onclick="delMarca(${i},${j})" style="font-size:.7rem;padding:2px 6px;border:1px solid #fca5a5;border-radius:4px;background:#fee2e2;color:var(--r6);cursor:pointer">✕</button></td>
+</tr>`).join('');
 }
-
+ 
 function updEM(i,j,field,val) {
   if (EXTRA_MARCAS[i]&&EXTRA_MARCAS[i][j]) EXTRA_MARCAS[i][j][field]=val;
   upd(i);
@@ -284,7 +284,7 @@ function updEMDisp(i,j,val) {
 function delMarca(i,j) {
   if (EXTRA_MARCAS[i]) { EXTRA_MARCAS[i].splice(j,1); renderExtraMarcas(i); upd(i); }
 }
-
+ 
 function chgD(i){
   const d=document.getElementById('d-'+i).value;
   const ex=document.getElementById('ex-'+i);
@@ -295,7 +295,7 @@ function chgD(i){
   else{ex.classList.remove('show');inp.value='';}
   upd(i);
 }
-
+ 
 function upd(i){
   R[i]={
     moneda: document.getElementById('mon-'+i)?.value || 'ARS',
@@ -309,7 +309,7 @@ function upd(i){
   document.getElementById('ft-cot').textContent=cot;
   document.getElementById('prog-txt').textContent=cot+' / '+ITEMS.length+' completados';
 }
-
+ 
 function isOk(i){
   // Leer desde DOM y sincronizar R[i]
   const mon = document.getElementById('mon-'+i);
@@ -321,7 +321,7 @@ function isOk(i){
   if((r.disp==='Parcial'||r.disp==='No')&&!r.det) return false;
   return true;
 }
-
+ 
 function buildXLSX() {
   // Build rows for Excel — leer desde DOM para capturar todos los campos
   const prvNombreXLS = PRV_NOMBRE || '';
@@ -369,7 +369,7 @@ function buildXLSX() {
   });
   return rows;
 }
-
+ 
 function downloadXLSX(rows, filename) {
   const ws = XLSX.utils.aoa_to_sheet(rows);
   // Column widths
@@ -388,8 +388,8 @@ function downloadXLSX(rows, filename) {
   XLSX.utils.book_append_sheet(wb, ws, 'Cotizacion');
   XLSX.writeFile(wb, filename);
 }
-
-
+ 
+ 
 // ─── GUARDAR / CARGAR PROGRESO
 function leerDOMFila(i) {
   // Lee siempre directo del DOM para no depender del estado R[i]
@@ -401,7 +401,7 @@ function leerDOMFila(i) {
     det:    document.getElementById('ed-'+i)?.value?.trim() || ''
   };
 }
-
+ 
 function guardarProgreso() {
   if (!ITEMS.length) { toast('Sin datos para guardar'); return; }
   const rows = [['__PROG__','1.0'],
@@ -427,7 +427,7 @@ function guardarProgreso() {
   XLSX.writeFile(wb, 'Progreso_'+ref2+'.xlsx');
   toast('✅ Progreso guardado');
 }
-
+ 
 function cargarProgreso(input) {
   // Normaliza disponibilidad al valor exacto del <select>
   function normDisp(val) {
@@ -518,7 +518,10 @@ function cargarProgreso(input) {
   };
   reader.readAsArrayBuffer(file);
 }
-
+ 
+// URL del Google Apps Script que guarda el Excel en Drive y envía el email
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw4PfLDh2U2RRR0hls-5q1fNIvzT_p9QxxlOEepN6ih9_fhcCP2fu80RI8iV8IR93Jaew/exec%27;
+ 
 async function enviar(){
   const pend = ITEMS.filter((_,i) => !isOk(i));
   if (pend.length) {
@@ -527,110 +530,91 @@ async function enviar(){
     document.getElementById('tr-'+first)?.scrollIntoView({behavior:'smooth', block:'center'});
     return;
   }
+ 
   const btn = document.getElementById('btn-env');
-  btn.disabled = true; btn.textContent = '⏳ Procesando...';
-
-  const params  = new URLSearchParams(location.search);
-  const ref     = params.get('ref') || 'MRP';
-  PRV_NOMBRE = params.get('prv') ? decodeURIComponent(params.get('prv')) : '';
-  const fecha   = new Date().toLocaleString('es-AR');
-  const rows    = buildXLSX();
-
-  // 1. Download Excel for the supplier to attach manually (fallback)
-  const filename = 'Cotizacion_' + ref + '.xlsx';
-
-  // 2. Generar Excel como base64 para incluir link de descarga en el email
-  let xlsxDataUrl = '';
+  btn.disabled = true;
+  btn.textContent = '⏳ Procesando...';
+ 
+  const params   = new URLSearchParams(location.search);
+  const ref      = params.get('ref') || 'MRP';
+  PRV_NOMBRE     = params.get('prv') ? decodeURIComponent(params.get('prv')) : '';
+  const dest     = params.get('dest') || params.get('f') || '';
+  const fecha    = new Date().toLocaleString('es-AR');
+  const filename = 'Cotizacion_' + ref + (PRV_NOMBRE ? '_' + PRV_NOMBRE.replace(/[^a-zA-Z0-9]/g,'_') : '') + '.xlsx';
+  const rows     = buildXLSX();
+ 
+  // 1. Generar Excel en base64 para enviarlo al Apps Script
+  btn.textContent = '⏳ Generando Excel...';
+  let xlsxBase64 = '';
   try {
-    const wbLink = XLSX.utils.book_new();
-    const wsLink = XLSX.utils.aoa_to_sheet(rows);
-    XLSX.utils.book_append_sheet(wbLink, wsLink, 'Cotizacion');
-    const xlsxBin = XLSX.write(wbLink, {bookType:'xlsx', type:'base64'});
-    xlsxDataUrl = 'data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,' + xlsxBin;
-  } catch(e) { console.warn('No se pudo generar base64 del Excel:', e); }
-
-  const downloadBtn = xlsxDataUrl
-    ? `<p style="margin-top:16px">
-        <a href="${xlsxDataUrl}" download="${filename}"
-           style="display:inline-block;padding:10px 20px;background:#1F3864;color:#fff;
-                  text-decoration:none;border-radius:6px;font-size:13px;font-weight:bold">
-          📥 Descargar cotización en Excel
-        </a>
-       </p>
-       <p style="font-size:10px;color:#888;margin-top:6px">
-         Si el botón no funciona en su cliente de email, el archivo Excel se descargó automáticamente en su PC al enviar la cotización.
-       </p>`
-    : `<p style="font-size:10px;color:#888;margin-top:10px">El archivo Excel con el mismo contenido se descarga en la PC del proveedor.</p>`;
-
-  // 3. Send via EmailJS — HTML table + link de descarga en body
-  const s    = params.get('s');
-  const t    = params.get('t');
-  const k    = params.get('k');
-  const dest = params.get('dest') || params.get('f');
-
-  // Build HTML table for email body
-  const cols = ['PROVEEDOR','CODIGO','NPF','DESCRIPCION','ALM','CANT','MONEDA','PRECIO','MARCA','DISPONIBILIDAD','DETALLE'];
-  const thStyle = 'padding:5px 8px;border:1px solid #aaa;background:#1F3864;color:#fff;font-weight:bold;font-size:11px;white-space:nowrap';
-  const headerRow = '<tr>' + cols.map(c => `<th style="${thStyle}">${c}</th>`).join('') + '</tr>';
-  const dataRows = rows.slice(1).map((r, ri) => {
-    const isExtra = String(r[0]).includes('(opción)');
-    const bg = isExtra ? '#FFF2CC' : (ri%2===0 ? '#f8f9fa' : '#ffffff');
-    const fs = isExtra ? 'italic' : 'normal';
-    const disp = String(r[7]||'').toLowerCase();
-    const dispBg = disp.includes('si') || disp.includes('sí') ? '#dcfce7'
-                 : disp.includes('parcial') ? '#fef9c3'
-                 : disp.includes('no') ? '#fee2e2' : bg;
-    return '<tr>' + r.map((cell, ci) => {
-      const cellBg = ci===7 ? dispBg : bg;
-      return `<td style="padding:4px 8px;border:1px solid #dee2e6;background:${cellBg};font-style:${fs};font-size:11px">${cell||''}</td>`;
-    }).join('') + '</tr>';
-  }).join('');
-
-  const htmlMsg = `<div style="font-family:Calibri,Arial,sans-serif;max-width:900px">
-<h3 style="color:#1F3864;margin-bottom:4px">Cotización recibida — ${PRV_NOMBRE ? '<strong>'+PRV_NOMBRE+'</strong> — ' : ''}${ref}</h3>
-<p style="color:#555;font-size:12px;margin-top:0">Fecha: ${fecha} &nbsp;·&nbsp; Total ítems: ${ITEMS.length}${PRV_NOMBRE ? ' &nbsp;·&nbsp; Proveedor: <strong>'+PRV_NOMBRE+'</strong>' : ''}</p>
-<table style="border-collapse:collapse;width:100%">${headerRow}${dataRows}</table>
-${downloadBtn}
-</div>`;
-
-  let emailSent = false;
-  if (s && t && k && dest) {
+    const wb = XLSX.utils.book_new();
+    const ws = XLSX.utils.aoa_to_sheet(rows);
+    // Anchos de columna
+    ws['!cols'] = [22,12,14,40,6,8,8,12,20,16,25].map(w => ({wch:w}));
+    XLSX.utils.book_append_sheet(wb, ws, 'Cotizacion');
+    const wbout = XLSX.write(wb, {bookType:'xlsx', type:'base64'});
+    xlsxBase64 = wbout;
+  } catch(e) {
+    console.error('Error generando Excel:', e);
+    toast('❌ Error generando Excel: ' + e.message, 'err');
+    btn.disabled = false;
+    btn.textContent = '📤 Enviar cotización';
+    return;
+  }
+ 
+  // 2. Resumen de texto para el email (liviano, sin tabla HTML)
+  const cotizados = ITEMS.filter((_,i) => isOk(i)).length;
+  const resumen = `Cotización recibida — ${PRV_NOMBRE ? PRV_NOMBRE + ' — ' : ''}${ref}
+Fecha: ${fecha}
+Total ítems: ${ITEMS.length} | Completados: ${cotizados}
+${PRV_NOMBRE ? 'Proveedor: ' + PRV_NOMBRE : ''}
+ 
+El archivo Excel con el detalle completo está adjunto en Google Drive.
+`;
+ 
+  // 3. Enviar al Apps Script → guarda en Drive y manda email con link
+  btn.textContent = '⏳ Enviando...';
+  let enviado = false;
+ 
+  if (dest) {
     try {
-      await loadEJS();
-      emailjs.init({publicKey: k});
-      await emailjs.send(s, t, {
-        to_email: dest,
-        subject:  'Cotización recibida — ' + (PRV_NOMBRE ? PRV_NOMBRE+' — ' : '') + ref + ' — ' + fecha,
-        message:  htmlMsg
+      const payload = {
+        filename,
+        file:    xlsxBase64,
+        dest,
+        subject: 'Cotización recibida — ' + (PRV_NOMBRE ? PRV_NOMBRE + ' — ' : '') + ref + ' — ' + fecha,
+        resumen
+      };
+ 
+      const resp = await fetch(APPS_SCRIPT_URL, {
+        method:  'POST',
+        // Apps Script requiere text/plain para evitar CORS preflight
+        headers: {'Content-Type': 'text/plain'},
+        body:    JSON.stringify(payload)
       });
-      emailSent = true;
+ 
+      const result = await resp.json();
+      if (result.ok) {
+        enviado = true;
+        console.log('Excel guardado en Drive:', result.url);
+      } else {
+        console.error('Apps Script error:', result.error);
+      }
     } catch(e) {
-      console.log('EmailJS error:', e?.text || e?.message);
+      console.error('Error enviando al Apps Script:', e);
     }
   }
-
-  // Storage: EmailJS only (Cloudflare Pages compatible)
-
-  // 4. Download Excel automáticamente en la PC del proveedor
+ 
+  // 4. Descargar Excel también en la PC del proveedor (siempre, como respaldo)
   downloadXLSX(rows, filename);
-
-  // Show success
+ 
+  // 5. Mostrar resultado
   document.getElementById('ov-ok').classList.add('open');
-  document.getElementById('ok-msg').textContent =
-    'Su cotización fue enviada' + (emailSent ? ' por email' : '') +
-    ' y se descargó el archivo Excel "' + filename + '". Puede adjuntarlo al email si lo desea.';
+  document.getElementById('ok-msg').textContent = enviado
+    ? `Su cotización fue enviada y el archivo "${filename}" quedó guardado. Muchas gracias.`
+    : `El archivo "${filename}" se descargó en su PC. Por favor adjúntelo al email de respuesta. Muchas gracias.`;
 }
-
-function loadEJS() {
-  return new Promise((res,rej) => {
-    if (typeof emailjs !== 'undefined') { res(); return; }
-    const s = document.createElement('script');
-    s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
-    s.onload = res; s.onerror = rej;
-    document.head.appendChild(s);
-  });
-}
-
+ 
 function toast(msg){
   const t=document.getElementById('toast');
   t.textContent=msg; t.classList.add('show');
